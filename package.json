@@ -1,0 +1,10 @@
+{
+  "name": "rooveui",
+  "version": "1.0.0",
+  "description": "Open Source react component library that you can implement in your app.",
+  "author": "Owen Rodriguez",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
