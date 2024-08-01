@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
 import "@/styles/globals.css";
 import NavbarSite from "../components/Navbar-site";
 import FooterSite from "@/components/Footer-site";
 
-const outfit = Outfit({ subsets: ["latin"] });
+// const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <body className="bg-zinc-950">
         <NavbarSite />
         {children}
         <FooterSite />

@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "@/styles/navbar.module.css";
 import MainLinksNavbar from "./MainLinks-Navbar-site";
 import SecondaryLinks from "./Navbar-SecondaryLinks";
 
@@ -23,7 +22,7 @@ export default function NavbarSite() {
   //   };
 
   return (
-    <header className={styles.HeaderNavbar}>
+    <header className="fixed w-full flex justify-between items-center px-10 py-3">
       <MainLinksNavbar />
       <SecondaryLinks />
     </header>
