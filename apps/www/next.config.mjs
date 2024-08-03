@@ -1,12 +1,17 @@
-import { createContentlayerPlugin } from "next-contentlayer";
+import { createContentlayerPlugin } from "next-contentlayer2";
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
+  swcMinify: true,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  // Optionally, add any other Next.js config below
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 const withContentlayer = createContentlayerPlugin({

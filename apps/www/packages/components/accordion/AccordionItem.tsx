@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode } from "react";
 
 // Accordion Item Props
 interface AccordionItemProps {

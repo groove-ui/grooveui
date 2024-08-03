@@ -1,6 +1,6 @@
-import { Mdx } from "@/components/mdx-components";
+// import { Mdx } from "@/components/mdx-components";
+import { MDXContent } from "@/components/MDXContent";
 import { allDocs } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
 
 interface DocPageProps {
   params: {
@@ -30,7 +30,7 @@ export default async function DocsPages({ params }: DocPageProps) {
     // Handle Error Page Here
     return (
       <main>
-        <h1>Document not found</h1>
+        <h1 className="text-lg">Document not found</h1>
         <p>The document you are looking for does not exist.</p>
       </main>
     );
@@ -38,9 +38,12 @@ export default async function DocsPages({ params }: DocPageProps) {
 
   return (
     <main>
-      <h1>{doc.title}</h1>
-      <p>{doc.description}</p>
-      <Mdx code={doc.body.code} />
+      <header className="mb-8">
+        <h1 className="text-4xl mb-2">{doc.title}</h1>
+        <p>{doc.description}</p>
+      </header>
+      <MDXContent code={doc.body.code} />
+      {/* <Mdx code={doc.body.code} /> */}
     </main>
   );
 }

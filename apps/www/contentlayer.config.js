@@ -1,4 +1,7 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer2/source-files";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import { codeImport } from "remark-code-import";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -17,13 +20,23 @@ export const Doc = defineDocumentType(() => ({
   filePathPattern: `docs/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: { type: "string", required: true },
-    description: { type: "string", required: false },
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
   },
   computedFields,
 }));
 
 export default makeSource({
-  contentDirPath: "content",
+  contentDirPath: "./content",
   documentTypes: [Doc],
+  mdx: {
+    remarkPlugins: [remarkGfm, codeImport],
+    rehypePlugins: [rehypeSlug],
+  },
 });
