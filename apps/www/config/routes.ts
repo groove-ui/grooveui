@@ -41,8 +41,8 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
+          title: "Checkbox",
+          href: "/docs/components/checkbox",
           items: [],
         },
         {

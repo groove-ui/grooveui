@@ -1,12 +1,10 @@
 .asideContainerTop {
   display: grid;
   grid-template-columns: 300px 1fr;
-  border: 1px solid red;
 }
 
 .asideContainer {
   padding: 6rem 2rem 30px;
-  border: 1px solid red;
 }
 
 .SidebarInnerContainer h3 {
